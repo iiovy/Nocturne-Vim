@@ -66,10 +66,5 @@ return {
       fg = "#ffffff",
     })
 
-    -- open floating oil
-    vim.keymap.set("n", "<leader>e", function()
-      require("oil").open_float()
-    end)
-
   end,
 }

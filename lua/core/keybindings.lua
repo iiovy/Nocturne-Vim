@@ -1,3 +1,7 @@
-vim.keymap.set("n", "<leader>w", ":w<CR>")
-vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+vim.g.mapleader = " "
+
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
+
+vim.keymap.set("n", "<leader>s", "<cmd>Oil --float<CR>", { desc = "Open Oil (float)" })
+
