@@ -1,51 +1,53 @@
 return {
-  "goolord/alpha-nvim",
+  {
+    "goolord/alpha-nvim",
+    event = "VimEnter",
 
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "folke/snacks.nvim",
+      "amansingh-afk/milli.nvim",
+    },
+
+    config = function()
+      local alpha = require("alpha")
+      local dashboard = require("alpha.themes.dashboard")
+
+      dashboard.section.header.val = {
+        "",
+        "",
+        "",
+        "",
+        "",
+      }
+
+      -- Snacks-based actions
+      dashboard.section.buttons.val = {
+        dashboard.button("f", " Find File", function()
+          require("snacks").picker.files()
+        end),
+
+        dashboard.button("g", " Live Grep", function()
+          require("snacks").picker.grep()
+        end),
+
+        dashboard.button("r", " Recent Files", function()
+          require("snacks").picker.recent()
+        end),
+
+        dashboard.button("n", " New File", ":ene <BAR> startinsert<CR>"),
+        dashboard.button("q", " Quit", ":qa<CR>"),
+      }
+
+      alpha.setup(dashboard.config)
+
+      -- milli overlay (safe)
+      vim.schedule(function()
+        require("milli").alpha({
+          splash = "fire",
+          loop = false,
+        })
+      end)
+    end,
   },
-
-  config = function()
-    local alpha = require("alpha")
-    local dashboard = require("alpha.themes.dashboard")
-
-    dashboard.section.header.val = {
-
-
-        
-
-
-    }
-
-    dashboard.section.buttons.val = {
-      dashboard.button("e", "  New file", ":ene<CR>"),
-    }
-
-    alpha.setup(dashboard.opts)
-
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "AlphaReady",
-      callback = function()
-        vim.opt.laststatus = 0
-        vim.opt.showtabline = 0
-      end,
-    })
-
-    vim.api.nvim_create_autocmd("BufUnload", {
-      callback = function()
-        vim.opt.laststatus = 3
-        vim.opt.showtabline = 2
-      end,
-    })
-
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = "alpha",
-      callback = function()
-        vim.opt_local.number = false
-        vim.opt_local.relativenumber = false
-        vim.opt_local.signcolumn = "no"
-        vim.opt_local.foldcolumn = "0"
-      end,
-    })
-  end,
 }
