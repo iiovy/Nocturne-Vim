@@ -48,3 +48,8 @@ map("n", "K", vim.lsp.buf.hover)
 
 map("n", "<leader>rn", vim.lsp.buf.rename)
 map("n", "<leader>ca", vim.lsp.buf.code_action)
+
+-- twilight 
+vim.keymap.set("n", "<leader>tw", "<cmd>Twilight<CR>", {
+    desc = "Toggle Twilight",
+})
