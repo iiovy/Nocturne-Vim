@@ -1,6 +1,6 @@
 local M = {}
 
-function M.setup()
+function M.load()
   vim.cmd("highlight clear")
   vim.g.colors_name = "grayscale"
 

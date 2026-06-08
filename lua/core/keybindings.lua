@@ -21,16 +21,11 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
--- Window splits
-map("n", "<leader>sv", "<C-w>v", { desc = "Vertical split" })
-map("n", "<leader>sh", "<C-w>s", { desc = "Horizontal split" })
-map("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close split" })
-
 -- ToggleTerm
 map("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Terminal" })
 
--- Search highlight
-map("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear search" })
+-- Search / snacks
+map("n", "<leader>h", "<cmd>lua require('snacks').picker()<CR>", { desc = "Snacks Picker" })
 
 -- Gitsigns
 map("n", "]h", "<cmd>Gitsigns next_hunk<CR>")
