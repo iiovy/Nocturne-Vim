@@ -10,7 +10,7 @@ return {
       options = {
         theme = {
           normal = {
-            a = { fg = "#1e1e1e", bg = "#88898a", gui = "bold" },
+            a = { fg = "#1e1e1e", bg = "#f5f5f5", gui = "bold" },
             b = { fg = "#f5f5f5", bg = "#2a2a2a" },
             c = { fg = "#f5f5f5", bg = "none" },
           },

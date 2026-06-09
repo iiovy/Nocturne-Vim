@@ -65,9 +65,17 @@ function M.load()
 
   set(0, "@string", { fg = "#c0c0c0", bg = NONE })
   set(0, "@number", { fg = "#d0d0d0", bg = NONE })
-
-
   set(0, "EndOfBuffer", { fg = NONE, bg = NONE })
+
+  vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ffffff" })
+  vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#ffffff" })
+  vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#ffffff" })
+  vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#ffffff" })
+
+  vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "#ffffff" })
+  vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "#ffffff" })
+  vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = "#ffffff" })
+  vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = "#ffffff" })
 end
 
 return M

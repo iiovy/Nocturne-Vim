@@ -7,7 +7,7 @@ return {
             term_bg = "#000000",
             inactive = false,
         },
-        context = 17,
+        context = 15,
         treesitter = true,
         expand = {
             "function",

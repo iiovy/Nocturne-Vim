@@ -9,11 +9,11 @@ return {
 
     global_note.setup({
       filename = "Notes",
-      directory = vim.fn.expand("~/notes/"),
+      directory = vim.fn.stdpath("config"),
 
       window_config = function()
 
-          local width = 30
+          local width = 45
           local height = 15
           local ui = vim.api.nvim_list_uis()[1]
 
@@ -25,7 +25,7 @@ return {
               width = width,
               height = height,
               row = math.floor((ui.height - height ) / 2),
-              col = math.floor((ui.width - width) / 1.5 ),
+              col = math.floor((ui.width - width) / 1.3 ),
               style = "minimal",
               border = "rounded",
               relative = "editor",
