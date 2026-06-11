@@ -1,19 +1,19 @@
 return {
-  "ankushbhagats/match.nvim",
+  'ankushbhagats/match.nvim',
 
   opts = {
-    prefix = "",
-    anchor = "NE",
-    style = "minimal",
-    border = "rounded",
-    border_hl = "Function",
+    prefix = '',
+    anchor = 'NE',
+    style = 'minimal',
+    border = 'rounded',
+    border_hl = 'Function',
   },
 
   keys = {
     {
-      "<leader>m",
-      "<cmd>Match<CR>",
-      desc = "Match Search",
+      '<leader>m',
+      '<cmd>Match<CR>',
+      desc = 'Match Search',
     },
   },
 }

@@ -1,18 +1,17 @@
 return {
-  "stevearc/oil.nvim",
+  'stevearc/oil.nvim',
 
   dependencies = {
-    "nvim-tree/nvim-web-devicons",
+    'nvim-tree/nvim-web-devicons',
   },
 
   config = function()
-
-    require("oil").setup({
+    require('oil').setup({
 
       default_file_explorer = true,
 
       columns = {
-        "icon",
+        'icon',
       },
 
       view_options = {
@@ -26,9 +25,9 @@ return {
         max_width = 0.5,
         max_height = 0.5,
 
-        border = "rounded",
+        border = 'rounded',
 
-        preview_split = "right",
+        preview_split = 'right',
         preview_split_size = 80,
 
         win_options = {
@@ -38,33 +37,32 @@ return {
     })
 
     -- transparent floating windows
-    vim.api.nvim_set_hl(0, "NormalFloat", {
-      bg = "none",
+    vim.api.nvim_set_hl(0, 'NormalFloat', {
+      bg = 'none',
     })
 
     -- transparent borders
-    vim.api.nvim_set_hl(0, "FloatBorder", {
-      fg = "#ffffff",
-      bg = "none",
+    vim.api.nvim_set_hl(0, 'FloatBorder', {
+      fg = '#ffffff',
+      bg = 'none',
     })
 
-    vim.api.nvim_set_hl(0, "OilBorder", {
-      fg = "#ffffff",
-      bg = "none",
+    vim.api.nvim_set_hl(0, 'OilBorder', {
+      fg = '#ffffff',
+      bg = 'none',
     })
 
     -- white icons/files
-    vim.api.nvim_set_hl(0, "Directory", {
-      fg = "#ffffff",
+    vim.api.nvim_set_hl(0, 'Directory', {
+      fg = '#ffffff',
     })
 
-    vim.api.nvim_set_hl(0, "OilDir", {
-      fg = "#ffffff",
+    vim.api.nvim_set_hl(0, 'OilDir', {
+      fg = '#ffffff',
     })
 
-    vim.api.nvim_set_hl(0, "OilFile", {
-      fg = "#ffffff",
+    vim.api.nvim_set_hl(0, 'OilFile', {
+      fg = '#ffffff',
     })
-
   end,
 }
