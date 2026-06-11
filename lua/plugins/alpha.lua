@@ -25,7 +25,6 @@ return {
 
       local img = nil
       local IMAGE_W, IMAGE_H = 80, 40
-      local GAP = 1
 
       local function clear_image()
         if img then
