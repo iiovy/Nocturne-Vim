@@ -1,45 +1,43 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
-  branch = 'main',
-  build = ':TSUpdate',
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
 
   opts = {
     auto_install = true,
 
     ensure_installed = {
-      'lua',
-      'vim',
-      'vimdoc',
+      "lua",
+      "vim",
+      "vimdoc",
 
-      'bash',
-      'fish',
+      "bash",
+      "fish",
 
-      'python',
-      'c',
-      'cpp',
-      'c_sharp',
-      'java',
-      'rust',
-      'go',
-      'zig',
+      "python",
+      "c",
+      "cpp",
+      "java",
+      "rust",
+      "go",
+      "zig",
 
-      'javascript',
-      'typescript',
-      'tsx',
-      'html',
-      'css',
-      'json',
+      "javascript",
+      "typescript",
+      "tsx",
+      "html",
+      "css",
+      "json",
 
-      'yaml',
-      'toml',
-      'xml',
+      "yaml",
+      "toml",
+      "xml",
 
-      'markdown',
-      'markdown_inline',
+      "markdown",
+      "markdown_inline",
 
-      'gitignore',
-      'gitcommit',
-      'sql',
+      "gitignore",
+      "gitcommit",
+      "sql",
     },
 
     highlight = {

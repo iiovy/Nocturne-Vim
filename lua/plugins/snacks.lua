@@ -9,7 +9,6 @@ return {
     picker = {},
 
     -- optional UI features
-    notifier = {},
     quickfile = {},
   },
 }
