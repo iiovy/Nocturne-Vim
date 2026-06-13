@@ -11,6 +11,7 @@ return {
       filename = 'notes',
       directory = vim.fn.stdpath('config') .. '/assets',
       window_config = function()
+        -- here you can change the size
         local width = 30
         local height = 15
         local ui = vim.api.nvim_list_uis()[1]

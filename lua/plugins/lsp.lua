@@ -1,59 +1,48 @@
 return {
-  'neovim/nvim-lspconfig',
+  "neovim/nvim-lspconfig",
 
   dependencies = {
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   },
 
   config = function()
-    -- Mason setup (installs LSP servers)
-    require('mason').setup()
+    require("mason").setup()
 
-    -- LSP server installation list + automatic setup
-    require('mason-lspconfig').setup({
+    local lspconfig = require("lspconfig")
+    local mason_lspconfig = require("mason-lspconfig")
+
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+    mason_lspconfig.setup({
       ensure_installed = {
-        -- Core
-        'lua_ls',
-        'pyright',
-        'clangd',
-        'rust_analyzer',
-
-        -- Web
-        'ts_ls',
-        'html',
-        'cssls',
-        'jsonls',
-
-        -- Java / C#
-        'jdtls',
-        'csharp_ls',
-
-        -- Other languages
-        'gopls',
-        'intelephense',
-        'yamlls',
-
-        -- Extras you asked for
-        'marksman',
-        'bashls',
-        'lemminx',
+        "lua_ls",
+        "pyright",
+        "clangd",
+        "rust_analyzer",
+        "html",
+        "cssls",
+        "jsonls",
+        "gopls",
+        "bashls",
+        "yamlls",
+        "marksman",
       },
 
-      -- modern automatic handler system
       handlers = {
-        -- Default handler for all servers
         function(server_name)
-          require('lspconfig')[server_name].setup({})
+          lspconfig[server_name].setup({
+            capabilities = capabilities,
+          })
         end,
 
-        -- Lua special config (Neovim support)
         lua_ls = function()
-          require('lspconfig').lua_ls.setup({
+          lspconfig.lua_ls.setup({
+            capabilities = capabilities,
             settings = {
               Lua = {
                 diagnostics = {
-                  globals = { 'vim' },
+                  globals = { "vim" },
                 },
               },
             },
