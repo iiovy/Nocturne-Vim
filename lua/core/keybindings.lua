@@ -1,6 +1,5 @@
-
-
 local map = vim.keymap.set
+
 
 -- Files
 map('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save file' })
@@ -47,4 +46,10 @@ map('n', '<leader>ca', vim.lsp.buf.code_action)
 -- twilight
 vim.keymap.set('n', '<leader>tw', '<cmd>Twilight<CR>', {
   desc = 'Toggle Twilight',
+})
+
+-- toggle themes
+local theme = require("core.themes.toggle")
+vim.keymap.set("n", "<leader>tt", theme.toggle, {
+  desc = "Toggle Theme",
 })

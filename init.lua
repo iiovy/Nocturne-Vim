@@ -1,34 +1,28 @@
+-- init.lua
 vim.g.mapleader      = " "
 vim.g.maplocalleader = "\\"
 
-
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-
-vim.opt.rtp:prepend(lazypath)
-vim.opt.shortmess:append('I')
-
-require('core.options')
-require('core.keybindings')
-require('core.theme').load()
-
-require('lazy').setup({
-  spec = {
-    { import = 'plugins' },
-  },
-})
-
-local default_theme = require('core.theme')
-local other_theme = require('core.other_theme')
-
-local state = 'default'
-local function toggle_theme()
-  if state == 'default' then
-    other_theme.load()
-    state = 'other'
-  else
-    default_theme.load()
-    state = 'default'
-  end
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.keymap.set('n', '<leader>tt', toggle_theme, { desc = 'Toggle theme' })
+-- Load core modules
+require("core.options")
+require("core.keybindings")
+require("core.themes.toggle").load()
+
+-- Setup lazy.nvim
+require("lazy").setup({
+  spec = { { import = "plugins" } },
+  checker = { enabled = true },
+})
