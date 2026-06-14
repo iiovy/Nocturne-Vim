@@ -10,8 +10,6 @@ A minimal nvim set up
 
 </div>
 
-# Preview
-
 ![Dashboard](assets/screenshots/dashboard.png)
 
  ![editing](assets/screenshots/editing.png)
