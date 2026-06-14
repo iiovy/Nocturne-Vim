@@ -53,3 +53,8 @@ map("n", "<leader>tw", "<cmd>Twilight<CR>", { desc = "Toggle Twilight" })
 -- Theme toggle
 local theme = require("core.themes.toggle")
 map("n", "<leader>tt", theme.toggle, { desc = "Toggle Theme" })
+
+-- Neominimap
+vim.keymap.set("n", "<leader>mm", function()
+  vim.cmd("Neominimap Toggle")
+end, { desc = "Toggle minimap" })
