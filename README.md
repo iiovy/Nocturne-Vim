@@ -6,19 +6,16 @@
 
 <div align="center">
 
-A calm, minimal Neovim setup, structured for a quiet and focused workflow.
+A calm, minimal setup structured for a quiet and focused workflow.<br>
+Designed as a small escape from visual clutter, endless menus, and unnecessary complexity.
 
 </div>
 
-
-> This setup is a small escape from visual clutter, endless menus, and unnecessary complexity. It is designed for those who value focus over features, and provides a stripped-down environment without losing essential tools
-
-
-## Preview
+<br>
 
 ![dashboard](assets/screenshots/dashboard.png)
 
-![dashboard](assets/screenshots/editing.png)
+![editing](assets/screenshots/editing.png)
 
 # ✦ Features
 
@@ -51,13 +48,17 @@ Utilities
 - A Nerd Font (for icons)
 - Kitty terminal (required for dashboard image support)
 - A terminal with true color support
-- ripgrep (`rg`) for searching
+- ripgrep (```rg```) for searching
 - fd (optional, improves file searching)
 
 ### Notes
 
 - This configuration uses transparency. Results may vary depending on your terminal and colorscheme.
-- Dashboard image support requires Kitty and `3rd/image.nvim`.
-- The default theme is Greyscale. Use `<leader>tt` to switch themes.
+- Dashboard image support requires Kitty and ```3rd/image.nvim```.
+- The default theme is Greyscale. Use ```<leader>tt``` to switch themes.
 
 # ✦ Installation
+
+```text
+git clone --depth 1 https://github.com/iiovy/Nocturne.vim ~/.config/nvim
+nvim
