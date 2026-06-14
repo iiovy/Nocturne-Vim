@@ -46,19 +46,23 @@ Utilities
 - Neovim 0.11+
 - Git
 - A Nerd Font (for icons)
-- Kitty terminal (required for dashboard image support)
 - A terminal with true color support
-- ripgrep (```rg```) for searching
+- Kitty terminal (required for dashboard image support)
+- A compositor with transparency support (e.g. Hyprland on Wayland)
+- ripgrep (`rg`) for searching
 - fd (optional, improves file searching)
+
 
 ### Notes
 
-- This configuration uses transparency. Results may vary depending on your terminal and colorscheme.
-- Dashboard image support requires Kitty and ```3rd/image.nvim```.
-- The default theme is Greyscale. Use ```<leader>tt``` to switch themes.
+- This configuration uses transparency. It depends on your terminal and compositor setup (e.g. Kitty + Hyprland). Results may vary.
+- Dashboard image support requires Kitty and `3rd/image.nvim`.
+- Neovim does not handle transparency directly; it is controlled externally.
+- The default theme is Greyscale. Use `<leader>tt` to switch themes.
+
 
 # ✦ Installation
 
 ```text
-git clone --depth 1 https://github.com/iiovy/Nocturne.vim ~/.config/nvim
+git clone --depth 1 https://github.com/iiovy/Nocturne-vim ~/.config/nvim
 nvim
