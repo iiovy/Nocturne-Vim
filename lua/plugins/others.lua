@@ -8,6 +8,14 @@ return {
     end,
   },
 
+  -- image
+  {
+   "3rd/image.nvim",
+   opts = {
+    backend = "kitty", -- or "ueberzug"
+   },
+  },
+
   -- trouble.nvim
   {
     "folke/trouble.nvim",
