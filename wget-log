@@ -1,0 +1,23 @@
+--2026-06-14 14:08:01--  https://cdn.discordapp.com/attachments/1452978987201462468/1515703619658186812/image.png?ex=6a2ff87f&is=6a2ea6ff&hm=4600f842aa8bee7c2a1ffd8d1480290d1d0011c9ada74b0afcac770d79718b4b
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving cdn.discordapp.com (cdn.discordapp.com)... 162.159.135.233, 162.159.134.233, 162.159.130.233, ...
+Connecting to cdn.discordapp.com (cdn.discordapp.com)|162.159.135.233|:443... failed: Connection timed out.
+Connecting to cdn.discordapp.com (cdn.discordapp.com)|162.159.134.233|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 530523 (518K) [image/png]
+Saving to: ‘image.png?ex=6a2ff87f&is=6a2ea6ff&hm=4600f842aa8bee7c2a1ffd8d1480290d1d0011c9ada74b0afcac770d79718b4b’
+
+     0K .......... .......... .......... .......... ..........  9% 3.33M 0s
+    50K .......... .......... .......... .......... .......... 19% 1.76M 0s
+   100K .......... .......... .......... .......... .......... 28% 2.28M 0s
+   150K .......... .......... .......... .......... .......... 38% 6.32M 0s
+   200K .......... .......... .......... .......... .......... 48% 2.15M 0s
+   250K .......... .......... .......... .......... .......... 57% 2.28M 0s
+   300K .......... .......... .......... .......... .......... 67% 4.54M 0s
+   350K .......... .......... .......... .......... .......... 77% 4.22M 0s
+   400K .......... .......... .......... .......... .......... 86% 9.68M 0s
+   450K .......... .......... .......... .......... .......... 96% 3.60M 0s
+   500K .......... ........                                   100% 51.6M=0.2s
+
+2026-06-14 14:10:14 (3.23 MB/s) - ‘image.png?ex=6a2ff87f&is=6a2ea6ff&hm=4600f842aa8bee7c2a1ffd8d1480290d1d0011c9ada74b0afcac770d79718b4b’ saved [530523/530523]
+
