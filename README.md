@@ -1,12 +1,12 @@
 <div align="center">
 
-# vim
+# Nocturne Vim
 
 </div>
 
 <div align="center">
 
-A minimal nvim set up
+A calm, minimal Neovim setup, structured for a quiet and focused workflow.
 
 </div>
 
